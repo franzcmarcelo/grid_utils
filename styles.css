@@ -2,8 +2,9 @@ body {
     background-color: #dee8ee;
 }
 
-li {
-    margin: 10px 0;
+hr {
+    background-color: #828c91;
+    margin: 30px 0 50px;
 }
 
 .container-menu {
@@ -11,6 +12,27 @@ li {
     width: 100vw;
     padding: 20px;
     background-color: #161B22;
+}
+.container-menu .title {
+    text-align: center;
+    color: aliceblue;
+}
+.container-menu .list-topics {
+    display: grid;
+    grid-template: repeat(9, 1fr) / 1fr;
+    justify-items: center;
+    row-gap: 15px;
+}
+.container-menu .list-topics a {
+    font-size: 18px;
+    color: rgb(189, 210, 230);
+    border: 1px dashed rgb(93, 74, 136);
+    border-radius: 8px;
+    padding: 4px;
+    text-decoration: none;
+}
+.container-menu .list-topics a:hover {
+    border: 1px solid rgb(106, 86, 151);
     color: aliceblue;
 }
 
