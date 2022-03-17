@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>4. Areas</title>
+</head>
+<style>
+    .container {
+        height: 100vh;
+        display: grid;
+        grid-template: 20% 1fr 20% / 30% 1fr;
+        gap: 10px;
+        /* repetimos header y footer porque nos ocuparan las 2 columnas */
+        grid-template-areas:
+            "header header"
+            "left content"
+            "footer footer";
+    }
+    .item:nth-of-type(1) {
+        background: rgb(47, 47, 218);
+        overflow: auto;
+        display: grid;
+        grid-template: repeat(2, 50px) / repeat(3, 1fr);
+    }
+
+    .header {
+        grid-area: header;
+    }
+    .left {
+        grid-area: left;
+    }
+    .content {
+        grid-area: content;
+
+    }
+    .footer {
+        grid-area: footer;
+
+    }
+</style>
+<body>
+    <a class="back" href="../index.html">Back to home</a>
+
+    <section class="container">
+            <div class="item header">header</div>
+            <div class="item left">left</div>
+            <div class="item content">content</div>
+            <div class="item footer">footer</div>
+    </section>
+</body>
+</html>

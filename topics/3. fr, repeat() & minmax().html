@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>3. fr, repeat() & minmax()</title>
+</head>
+<style>
+    .container {
+        display: grid;
+        /*
+        Unidad fracion: fr
+        grid-template: 300px 100px 100px / 1fr 1fr 1fr;
+
+        Auto
+        Asigna el espacio a la columna, tomando en cuenta su contenido
+        grid-template: 300px 100px 100px / auto auto auto;
+
+        repeat()
+        grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+
+        Para establecer espacios minimos
+        grid-template: repeat(3, 1fr) / repeat(4, minmax(200px, 1fr));
+        */
+        grid-template: repeat(3, 1fr) / minmax(300px, 1fr) 1fr 1fr 1fr;
+
+        gap: 50px 30px;
+    }
+</style>
+<body>
+    <a class="back" href="../index.html">Back to home</a>
+
+    <section class="container">
+        <div class="item">
+            <div class="item">subitem #1</div>
+            <div class="item">subitem #2</div>
+            <div class="item">subitem #3</div>
+            <div class="item">subitem #4</div>
+            <div class="item">subitem #5</div>
+        </div>
+        <div class="item">item #2</div>
+        <div class="item">item #3</div>
+        <div class="item">item #4</div>
+        <div class="item">item #5</div>
+        <div class="item">item #6</div>
+        <div class="item">item #7</div>
+        <div class="item">item #8</div>
+        <div class="item">item #9</div>
+        <div class="item">item #10</div>
+        <div class="item">item #11</div>
+        <div class="item">item #12</div>
+    </section>
+</body>
+</html>

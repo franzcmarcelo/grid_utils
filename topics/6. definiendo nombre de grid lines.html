@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>6. Definiendo nomnbre de grid lines</title>
+</head>
+<style>
+    .container {
+        height: 80vh;
+        width: 90%;
+        display: grid;
+        gap: 5px;
+        /* grid-template: repeat(5, 1fr) / repeat(7, 1fr); */
+        grid-template-columns:
+            [Cinicio] 1fr [Clinea2] 1fr [Clinea3] 1fr [CItem2-fin] 1fr [Clinea5] 1fr [CItem3-fin] 1fr [CItem5-fin] 1fr [Cfinal];
+        grid-template-rows:
+            [Rinicio]
+            1fr
+            [Rlinea2]
+            1fr
+            [Rlinea3]
+            1fr
+            [RItem1-fin]
+            1fr
+            [RItem4-fin]
+            1fr
+            [Rfinal];
+    }
+
+    .item:nth-of-type(1) {
+        grid-column: Cinicio / Cfinal;
+        grid-row: Rinicio / RItem1-fin;
+    }
+
+    .item:nth-of-type(2) {
+        grid-column: Cinicio / CItem2-fin;
+        grid-row: RItem1-fin / Rfinal;
+    }
+
+    .item:nth-of-type(3) {
+        grid-column: CItem2-fin / CItem3-fin;
+        grid-row: RItem1-fin / Rfinal;
+    }
+
+    .item:nth-of-type(4) {
+        grid-column: CItem3-fin / Cfinal;
+        grid-row: RItem1-fin / RItem4-fin;
+    }
+
+    .item:nth-of-type(5) {
+        grid-column: CItem3-fin / CItem5-fin;
+        grid-row: RItem4-fin / Rfinal;
+    }
+
+    .item:nth-of-type(6) {
+        grid-column: CItem5-fin / Cfinal;
+        grid-row: RItem4-fin / Rfinal;
+    }
+</style>
+<body>
+    <a class="back" href="../index.html">Back to home</a>
+
+    <section class="container">
+        <div class="item">item #1</div>
+        <div class="item">item #2</div>
+        <div class="item">item #3</div>
+        <div class="item">item #4</div>
+        <div class="item">item #5</div>
+        <div class="item">item #6</div>
+    </section>
+</body>
+
+</html>

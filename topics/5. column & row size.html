@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>5. Column & Row Size</title>
+</head>
+<style>
+
+    .container{
+        height: 80vh;
+        width: 90%;
+        display: grid;
+        grid-template: repeat(5, 1fr) / repeat(7, 1fr);
+        gap: 5px;
+    }
+
+    /*
+    Definimos en que "Grid Line" comienza y terminar nuestro contenido
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    Abreviatura:
+    Definimos las columndas que ocupara, especificando los "grid lines"
+    grid-column: 1 / 3;
+
+    span: le decimos que ocupe dos espacios
+    grid-column: 1 / span 2;
+
+    Si no sabemos en que "grid line" terminarà, -1 asume como la ultima "grid line"
+    grid-column: 1 / -1;
+    */
+
+    .item:nth-of-type(1){
+        grid-column: 1 / -1;
+        grid-row: 1 / span 3;
+    }
+    .item:nth-of-type(2){
+        grid-column: 1 / span 3;
+        grid-row: 4 / -1;
+    }
+    .item:nth-of-type(3){
+        grid-column: 4 / span 2;
+        grid-row: 4 / -1;
+    }
+    .item:nth-of-type(4){
+        grid-column: 6 / -1;
+        grid-row: 4 / span 1;
+    }
+    .item:nth-of-type(5){
+        grid-column: 6 / span 1;
+        grid-row: 5 / -1;
+    }
+    .item:nth-of-type(6){
+        grid-column: 7 / -1;
+        grid-row: 5 / -1;
+    }
+</style>
+<body>
+    <a class="back" href="../index.html">Back to home</a>
+
+    <section class="container">
+        <div class="item">item #1</div>
+        <div class="item">item #2</div>
+        <div class="item">item #3</div>
+        <div class="item">item #4</div>
+        <div class="item">item #5</div>
+        <div class="item">item #6</div>
+    </section>
+</body>
+</html>

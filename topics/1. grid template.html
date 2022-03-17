@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>1. Grid Template</title>
+</head>
+<style>
+    .container {
+        display: grid;
+        /*
+        Nro y tamaño columnas
+        grid-template-columns: 25% 200px 25%;
+
+        Nro y tamaño de filas
+        grid-template-rows: 300px 300px;
+
+        - fijo (px), dinamico (%) o combinado
+        - Grid explicito (instrucciones que definimos) e implicito (no contemplados)
+
+        Sintaxis para resumir columns y rows
+        grid-template: filas / columnas;
+        */
+        grid-template: 300px 100px 100px / 75% 100px 100px;
+    }
+    /*
+    Subgrids
+    Aplica tanto para los hijos directos de grid conteiner
+    y para los subitems (nivel 2)
+    */
+    .item:nth-of-type(4) {
+        background: #161B22;
+        overflow: auto;
+
+        display: grid;
+
+        /*
+        Aun esta especificacion no esta disponible
+        Lo que pasaria: heredaria toda la configuracion del grid padre
+        display: subgrid;
+        */
+        grid-template: 50px 50px 50px / 50% 50%;
+    }
+</style>
+<body>
+    <a class="back" href="../index.html">Back to home</a>
+    <section class="container">
+        <div class="item">item #1</div>
+        <div class="item">item #2</div>
+        <div class="item">item #3</div>
+        <div class="item">
+            <div class="item">subitem #1</div>
+            <div class="item">subitem #2</div>
+            <div class="item">subitem #3</div>
+            <div class="item">subitem #4</div>
+            <div class="item">subitem #5</div>
+        </div>
+        <div class="item">item #5</div>
+        <div class="item">item #6</div>
+        <div class="item">item #7</div>
+        <div class="item">item #8</div>
+        <div class="item">item #9</div>
+        <div class="item">item #10</div>
+        <div class="item">item #11</div>
+        <div class="item">item #12</div>
+    </section>
+</body>
+</html>
